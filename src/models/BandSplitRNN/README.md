@@ -1,4 +1,4 @@
-## SE‑Enhanced BandSplitRNN
+## BandSplitRNN + SE-Layers
 ### Key Idea
 Builds on the original BandSplitRNN (BSRNN) by adding Squeeze‑and‑Excitation (SE) layers after each residual block. These channel‑wise attention modules automatically reweight feature channels, improving the model’s focus on critical time–frequency information.
 
