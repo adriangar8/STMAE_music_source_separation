@@ -62,9 +62,7 @@ We implement two complementary MSS models:
 - Why use it： Runs on a laptop CPU.Easy to see and edit what each component means.Good, classic baseline before deep‑learning models.
 
 --> See the models folder's README.md file for more details.
-  
-# Data Pipeline
-For full details on data download, cropping and augmentation, please refer to src/README.md.
+
 
 #  Models at a Glance 
     
@@ -76,7 +74,9 @@ For full details on data download, cropping and augmentation, please refer to sr
   - Non‑negative Matrix Factorization baseline  
   - Path: `src/models/NMF/`
 
-
+  
+# Data Pipeline
+For full details on data download, cropping and augmentation, please refer to src/README.md.
 
 
 
