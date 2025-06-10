@@ -16,18 +16,18 @@ This repository hosts all code, data, and experiment logs for our STMAE course p
     ├── data                            # Data preparation and augmentation
     │   ├── MUSDB18_Audio_Data_Augmentation.ipynb   
     │   ├── MUSDB18_Data_Crop2.ipynb                
-    │   └── README.md                               # Details on dataset structure and usage
+    │   └── README.md                   # Details on dataset structure and usage
     └── models                          # Model implementations
-        ├── BandSplitRNN               # SE‑Enhanced BandSplitRNN model
-        │   ├── README.md              # Usage and training instructions for BSRNN
-        │   ├── original               # Original BSRNN implementation
+        ├── BandSplitRNN                # SE‑Enhanced BandSplitRNN model
+        │   ├── README.md               # Usage and training instructions for BSRNN
+        │   ├── original                # Original BSRNN implementation
         │   │   └── to_delete.txt      
         │   └── SE‑layers             
         │       └── to_delete.txt      
         ├── NMF                         # Non-negative Matrix Factorization baseline
-        │   └── README.md              # Usage and training instructions for NMF
+        │   └── README.md               # Usage and training instructions for NMF
         └── U‑Net                       # Lightweight U‑Net model
-            └── README.md              # Usage and training instructions for U‑Net
+            └── README.md               # Usage and training instructions for U‑Net
 ```
 
 
