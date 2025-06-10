@@ -29,7 +29,11 @@ Incoherent Augmentation: Combine stems from different tracks with individual aug
 
 ```mermaid
 flowchart LR
-    A[Input Audio Stem] --> C1{Pitch Shift?}
+    A[Input Audio Stem] --> B[Is suitable?]
+
+    B -->|Yes| C1[Pitch Shift?]
+    B -->|No| A
+
     C1 -->|Yes| D1[Apply Pitch Shift<br/>±2 semitones]
     C1 -->|No| N1[Normalize]
     D1 --> N1[Normalize]
