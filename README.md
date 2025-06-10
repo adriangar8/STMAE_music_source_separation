@@ -66,7 +66,7 @@ We implement two complementary MSS models:
 - How it works: Encoder (Conv→BN→ReLU→Pool) → Bottleneck (64 + Dropout) → Decoder (TransposeConv + Skip)
 - Why use it: Trainable on a single GPU (e.g. GTX 1650) as a low‑resource baseline
 
---> See the data folder's README.md file for more details.
+--> See the models folder's README.md file for more details.
 
 
 
