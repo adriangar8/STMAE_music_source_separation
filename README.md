@@ -50,7 +50,7 @@ In order to increase the training material, we implemented an augmentation pipel
 - Dynamic Range Compression: Apply audio compression with configurable threshold and ratio
 - Reverb Effects: Add spatial ambience with adjustable room size and damping parameters
 
-Go check the data folder's README.md file for more details.
+--> See the data folder's README.md file for more details.
 
 
 # Model Architectures for MSS
