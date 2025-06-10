@@ -76,10 +76,7 @@ Quick start:
 
 Quick start:
 ```bash
-python src/models/U‑Net/train_unet.py \
-  --data-dir datasets/musdb18 \
-  --epochs 50 \
-  --batch-size 4
+python src/
 ```
 
 
