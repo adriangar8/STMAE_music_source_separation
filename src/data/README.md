@@ -34,7 +34,7 @@ flowchart LR
     B -->|Yes| C1[Pitch Shift?]
     B -->|No| C[Take another extract]
 
-    C --> A
+    C --> B
 
     C1 -->|Yes| D1[Apply Pitch Shift<br/>±2 semitones]
     C1 -->|No| N1[Normalize]
