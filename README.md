@@ -70,6 +70,26 @@ We implement two complementary MSS models:
 
 
 
+# Data Pipeline
+For full details on data download, cropping and augmentation, please refer to src/README.md.
+
+#  Models at a Glance 
+
+- **BandSplitRNN (baseline)**  
+  - Band‑split + RNN baseline  
+  - Path: `src/models/BandSplitRNN/original/`
+
+- **BandSplitRNN + SE**  
+  - Adds SE attention to sharpen feature focus  
+  - Path: `src/models/BandSplitRNN/SE-layers/`
+  - 
+- **U‑Net (baseline)**  
+  - Classic symmetric convolutional encoder–decoder  
+  - Path: `src/models/U-Net/`
+    
+- **NMF (baseline)**  
+  - Non‑negative Matrix Factorization baseline  
+  - Path: `src/models/NMF/`
 
 
 
