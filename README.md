@@ -55,6 +55,14 @@ We implement two complementary MSS models:
 
 ## 2. Non-negative Matrix Factorization
 
+- What it is: Split a spectrogram into two non‑negative parts:W = sound “shapes” (like tiny snippets of timbre), H = when each shape happens over time
+
+- How it works: Start with random W and H.Update them again and again with a simple multiply‑and‑divide rule until W H looks like the original spectrogram.Use W H to build masks and convert back to audio.
+
+- Why use it： Runs on a laptop CPU.Easy to see and edit what each component means.Good, classic baseline before deep‑learning models.
+
+--> See the models folder's README.md file for more details.
+  
 # Data Pipeline
 For full details on data download, cropping and augmentation, please refer to src/README.md.
 
