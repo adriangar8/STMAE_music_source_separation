@@ -6,6 +6,23 @@ This project focuses on Music Source Separation (MSS), which decomposes a mixed 
 
 # Audio Augmentation Pipelines for MUSDB18
 
+In order to increase the training material, we implemented an augmentation pipeline for the audio files present in the dataset.
+
+<b>Core Functionality</b>
+
+- Dataset Integration: Seamless loading and processing of MUSDB18 dataset
+- Mono Conversion: Automatic stereo-to-mono conversion for simplified processing
+- Multi-stem Processing: Individual handling of vocals, drums, bass, and other instrument tracks
+- Audio Quality Assessment: Automatic validation of audio segments for energy and activity levels
+- Energy Threshold: Minimum RMS energy validation (0.005)
+- Silent Segment Detection: Activity ratio analysis (30% minimum)
+
+<b>Audio Augmentation Techniques</b>
+- Pitch Shifting: Transpose audio by specified semitones (-2 to +2 semitones)
+- Time Stretching: Modify playback speed while preserving pitch (0.8x to 1.2x)
+- Dynamic Range Compression: Apply audio compression with configurable threshold and ratio
+- Reverb Effects: Add spatial ambience with adjustable room size and damping parameters
+
 Go check the data folder's README.md file for more details.
 
 # Models
