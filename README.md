@@ -2,7 +2,7 @@
 
 This project focuses on Music Source Separation (MSS), which decomposes a mixed music signal into independent components such as vocals, drums, bass, and accompaniment—crucial for remixing, automatic transcription, and music education. We enhance the BandSplitRNN (BSRNN) model by integrating Squeeze‑and‑Excitation (SE) attention layers to improve its ability to focus on key time–frequency features. Additionally, we implement a lightweight U‑Net inspired by TFC‑TDF‑UNet v3 to evaluate performance in resource‑constrained environments. These complementary approaches explore the trade‑off between model complexity and separation quality.
 
-
+This repository hosts all code, data, and experiment logs for our STMAE course project. The goal is to compare and improve two deep-learning architectures (BandSplitRNN + SE Layers and U-Net) on multi-track music source separation.
 
 # Audio Augmentation Pipelines for MUSDB18
 
