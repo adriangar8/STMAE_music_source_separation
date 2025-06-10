@@ -5,6 +5,7 @@ The <b>MUSDB18_Audio_Data_Augmentation.ipynb</b>  notebook provides a complete p
 <b> Core Functionality</b>
 - Dataset Integration: Seamless loading and processing of MUSDB18 dataset
 - Mono Conversion: Automatic stereo-to-mono conversion for simplified processing
+- Cropped Files Generation: crops track objects from the musdb libray and stores them in a new folder
 - Multi-stem Processing: Individual handling of vocals, drums, bass, and other instrument tracks
 - Audio Quality Assessment: Automatic validation of audio segments for energy and activity levels
   - Energy Threshold: Minimum RMS energy validation (0.005)
