@@ -1,7 +1,4 @@
-# STMAE_music_source_separation
-In this repository the implementation develop for the final project of the Selected Topics in Music and Acoustic Enginnering subject can be seen.
-
-# Introduce
+# Introduction
 
 This project focuses on Music Source Separation (MSS), which decomposes a mixed music signal into independent components such as vocals, drums, bass, and accompaniment—crucial for remixing, automatic transcription, and music education. We enhance the BandSplitRNN (BSRNN) model by integrating Squeeze‑and‑Excitation (SE) attention layers to improve its ability to focus on key time–frequency features. Additionally, we implement a lightweight U‑Net inspired by TFC‑TDF‑UNet v3 to evaluate performance in resource‑constrained environments. These complementary approaches explore the trade‑off between model complexity and separation quality.
 
