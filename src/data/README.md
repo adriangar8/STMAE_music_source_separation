@@ -9,6 +9,7 @@ The <b>MUSDB18_Audio_Data_Augmentation.ipynb</b>  notebook provides a complete p
 - Audio Quality Assessment: Automatic validation of audio segments for energy and activity levels
   - Energy Threshold: Minimum RMS energy validation (0.005)
   - Silent Segment Detection: Activity ratio analysis (30% minimum)
+- Integrity Verification: several error flags are implemented in the code, they exit the process when the data is failing a condition (e.g. missing stem, invalid augmentation type, unreconized track name...)
 
 
 <b>Audio Augmentation Techniques</b>
@@ -16,6 +17,7 @@ The <b>MUSDB18_Audio_Data_Augmentation.ipynb</b>  notebook provides a complete p
 - Time Stretching: Modify playback speed while preserving pitch (0.8x to 1.2x)
 - Dynamic Range Compression: Apply audio compression with configurable threshold and ratio
 - Reverb Effects: Add spatial ambience with adjustable room size and damping parameters
+
 
 
 # Augmentation Strategies
