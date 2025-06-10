@@ -8,7 +8,7 @@ Builds on the original BandSplitRNN (BSRNN) by adding Squeeze‑and‑Excitation
 - Mask Estimation: Use sub‑band–specific MLPs followed by a GLU to predict complex masks and reconstruct the full spectrogram.
 
 ## Architecture
-<img src="https://raw.githubusercontent.com/adriangar8/STMAE_music_source_separation/tree/main/imgs/BSRNN_original.png" 
+<img src="https://raw.githubusercontent.com/agarcias/TRAAE_music_source_separation/main/imgs/BSRNN_original.png" 
      alt="BSRNN Architecture Diagram" 
      style="width:80%; max-width:600px; display: block; margin: 0 auto;"/>
 
