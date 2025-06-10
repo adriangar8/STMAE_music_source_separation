@@ -54,52 +54,32 @@ In order to increase the training material, we implemented an augmentation pipel
 
 
 # Model Architectures for MSS
-Below is a parallel, pipeline‑style overview of our two separation models:
+We implement two complementary MSS models:
 
 ## 1. SE‑Enhanced BandSplitRNN
-### Core Functionality
-- Sub‑Band Decomposition: Split input STFT into K non‑overlapping frequency bands
-- Dual‑Path Modeling: Interleave time‑axis and frequency‑axis BLSTMs with residual connections
-- Channel Attention: Squeeze‑and‑Excitation layers after each BLSTM to reweight feature channels
-- Mask Estimation: Sub‑band MLPs + GLU to predict complex masks and reconstruct the full spectrogram
-  
-### Key Features
-- Preserves original BSRNN flow while adding lightweight SE blocks
-- Minimal parameter increase (~32.4 M → 32.5 M)
-- Faster convergence and higher SDR on MUSDB18
+- What it is: BandSplitRNN with lightweight Squeeze‑and‑Excitation (SE) blocks for channel attention
+- How it works: Sub‑band split → Dual‑path BLSTM → SE attention → Mask estimation
+- Why use it: +0.3–0.5 dB SDR gain on MUSDB18 with only ~0.1 M extra parameters
 
-### Training Details
-- Loss: Weighted L1 on magnitude + phase (α = 0.5)
-- Optimizer: Adam, lr=1e-3 (decay 0.98 every 2 epochs), batch size=2
-- Regularization: Gradient clipping (max norm=5), early stopping after 10 stagnant epochs
-
-### Usage
+Quick start:
 ```bash
-# train SE-Enhanced BSRNN
-
+python src/models/BandSplitRNN/train_bsrnn_se.py \
+  --data-dir datasets/musdb18 \
+  --epochs 100 \
+  --batch-size 2
 ```
 
 ## 2. Lightweight U‑Net
-### Core Functionality
-- Encoder–Decoder Backbone: Standard U‑Net with reduced depth/channels for single‑GPU training
-- Magnitude‑Only Prediction: 1×1 conv to estimate magnitude spectrogram, reuse mixture phase for reconstruction
-- Skip Connections: Preserve fine‑grained detail via concatenation between encoder and decoder
+- What it is: Scaled‑down U‑Net (8→16→32 filters) inspired by TFC‑TDF‑UNet v3
+- How it works: Encoder (Conv→BN→ReLU→Pool) → Bottleneck (64 + Dropout) → Decoder (TransposeConv + Skip)
+- Why use it: Trainable on a single GPU (e.g. GTX 1650) as a low‑resource baseline
 
-### Key Features
-- Inspired by TFC‑TDF‑UNet v3 but scaled down (filters 8→16→32 in encoder)
-- Encoder: Conv2D→BatchNorm→ReLU→MaxPool ×3
-- Bottleneck: Conv2D(64) + Dropout(0.3)
-- Decoder: Conv2DTranspose + Skip + Dropout(0.2)
-
-### Training Details
-- Preprocessing: 16 kHz resampling, Hann‑window STFT (nfft=1024, hop=512)
-- Optimizer: Adam, lr=1e-3, batch size=4, L2 weight decay=1e-5
-- Padding: Zero‑pad to multiple of 8 in time/freq, crop output to original shape
-
-### Usage
+Quick start:
 ```bash
-# train U‑Net
-
+python src/models/U‑Net/train_unet.py \
+  --data-dir datasets/musdb18 \
+  --epochs 50 \
+  --batch-size 4
 ```
 
 
