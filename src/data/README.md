@@ -32,7 +32,9 @@ flowchart LR
     A[Input Audio Stem] --> B[Is suitable?]
 
     B -->|Yes| C1[Pitch Shift?]
-    B -->|No| A
+    B -->|No| C[Take another extract]
+
+    C --> A
 
     C1 -->|Yes| D1[Apply Pitch Shift<br/>±2 semitones]
     C1 -->|No| N1[Normalize]
