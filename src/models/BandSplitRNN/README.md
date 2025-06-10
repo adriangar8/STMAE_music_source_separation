@@ -7,9 +7,10 @@ Builds on the original BandSplitRNN (BSRNN) by adding Squeeze‑and‑Excitation
 - Dual‑Path BLSTM: Apply bidirectional LSTMs alternately over the time and frequency dimensions, with residual connections across blocks.
 - Mask Estimation: Use sub‑band–specific MLPs followed by a GLU to predict complex masks and reconstruct the full spectrogram.
 
-![Alt text]([imgs/BSRNN_original.png](https://github.com/adriangar8/STMAE_music_source_separation/blob/main/src/models/BandSplitRNN/README.md))
 
 *Figure 1: Complete architecture overview showing sub-band processing paths*
+
+*Figure 2: Squeeze and excitation layer implementation*
 
 ### Parameter Count
 Approximately 32.5 M parameters; the added SE layers incur a negligible increase while delivering significant performance gains.
