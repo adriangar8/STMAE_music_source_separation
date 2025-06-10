@@ -61,23 +61,12 @@ We implement two complementary MSS models:
 - How it works: Sub‑band split → Dual‑path BLSTM → SE attention → Mask estimation
 - Why use it: +0.3–0.5 dB SDR gain on MUSDB18 with only ~0.1 M extra parameters
 
-Quick start:
-```bash
-//python src/data/src/data/MUSDB18_Audio_Data_Augmentation.ipynb \
-//  --data-dir datasets/musdb18 \
-//  --epochs 100 \
-//  --batch-size 2
-```
-
 ## 2. Lightweight U‑Net
 - What it is: Scaled‑down U‑Net (8→16→32 filters) inspired by TFC‑TDF‑UNet v3
 - How it works: Encoder (Conv→BN→ReLU→Pool) → Bottleneck (64 + Dropout) → Decoder (TransposeConv + Skip)
 - Why use it: Trainable on a single GPU (e.g. GTX 1650) as a low‑resource baseline
 
-Quick start:
-```bash
-python src/
-```
+--> See the data folder's README.md file for more details.
 
 
 
