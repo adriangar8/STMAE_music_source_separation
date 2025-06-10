@@ -19,8 +19,10 @@ The <b>MUSDB18_Audio_Data_Augmentation.ipynb</b>  notebook provides a complete p
 
 
 # Augmentation Strategies
-    Coherent Augmentation (Fixed Parameters): Apply identical augmentation parameters across all stems from the same track
-   Semi-Coherent Augmentation (Varying Parameters): Apply different random augmentations to each stem from the same track
+Coherent Augmentation (Fixed Parameters): Apply identical augmentation parameters across all stems from the same track.
+
+Semi-Coherent Augmentation (Varying Parameters): Apply different random augmentations to each stem from the same track.
+
 Incoherent Augmentation: Combine stems from different tracks with individual augmentations
 
 ## Single Stem Random Augmentation Module
