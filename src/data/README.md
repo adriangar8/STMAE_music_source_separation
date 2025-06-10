@@ -1,12 +1,29 @@
-# Audio Augmentation Pipelines for MUSDB18
+# Overview
+The <b>MUSDB18_Audio_Data_Augmentation.ipynb</b>  notebook provides a complete pipeline for augmenting audio data from the MUSDB18 dataset, which is widely used for music source separation tasks. The system extracts individual instrument stems (vocals, drums, bass, other) from music tracks and applies various audio augmentation techniques to generate synthetic training data.
 
-This folder contains all the scripts to perform data augmentation on the MUSDB18 Dataset. WE provide below the implemented pipelines for more clarity. 
+# Features
+- Dataset Integration: Seamless loading and processing of MUSDB18 dataset
+- Mono Conversion: Automatic stereo-to-mono conversion for simplified processing
+- Multi-stem Processing: Individual handling of vocals, drums, bass, and other instrument tracks
+- Audio Quality Assessment: Automatic validation of audio segments for energy and activity levels
+Audio Augmentation Techniques
+- Pitch Shifting: Transpose audio by specified semitones (-2 to +2 semitones)
+- Time Stretching: Modify playback speed while preserving pitch (0.8x to 1.2x)
+- Dynamic Range Compression: Apply audio compression with configurable threshold and ratio
+- Reverb Effects: Add spatial ambience with adjustable room size and damping parameters
 
-Make sure to update the dataset's path as well as the output directories paths (augmented audio files) for the code tu run well.
+# Augmentation Strategies
+Coherent Augmentation (Fixed Parameters): Apply identical augmentation parameters across all stems from the same track
+Semi-Coherent Augmentation (Varying Parameters): Apply different random augmentations to each stem from the same track
+Incoherent Augmentation: Combine stems from different tracks with individual augmentations
 
-## 1. Single Stem Random Augmentation
+# Paths to check
+Make sure you update the paths in the config object to match the targeted directories location on your machine.
+- MUSDB18_PATH = "/path/to/musdb18"
+- OUTPUT_DIR_COHERENT_MIX = "/path/to/coherent/output"
+- OUTPUT_DIR_INCOHERENT_MIX = "/path/to/incoherent/output"
 
-
+# 1. Single Stem Random Augmentation
 
 ```mermaid
 flowchart LR
@@ -39,7 +56,7 @@ style N4 fill:#ffecb3
 ```
 
 
-## 2. Incoherent Augmentation Pipeline
+# 2. Incoherent Augmentation Pipeline
 
 This pipeline combines stems from multiple tracks to create novel mixtures.
 
@@ -69,7 +86,7 @@ graph TD
     F --> G[Final Augmented Mixture]
 ```
 
-## 3. Coherent Augmentation Pieline
+# 3. Coherent Augmentation Pieline
 
 This pipelines combines stems from a single track to create novel mixtures.
 ```mermaid
