@@ -82,7 +82,7 @@ For full details on data download, cropping and augmentation, please refer to sr
 - **BandSplitRNN + SE**  
   - Adds SE attention to sharpen feature focus  
   - Path: `src/models/BandSplitRNN/SE-layers/`
-  - 
+    
 - **U‑Net (baseline)**  
   - Classic symmetric convolutional encoder–decoder  
   - Path: `src/models/U-Net/`
