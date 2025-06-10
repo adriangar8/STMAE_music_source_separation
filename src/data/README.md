@@ -17,13 +17,7 @@ Coherent Augmentation (Fixed Parameters): Apply identical augmentation parameter
 Semi-Coherent Augmentation (Varying Parameters): Apply different random augmentations to each stem from the same track
 Incoherent Augmentation: Combine stems from different tracks with individual augmentations
 
-# Paths to check
-Make sure you update the paths in the config object to match the targeted directories location on your machine.
-- MUSDB18_PATH = "/path/to/musdb18"
-- OUTPUT_DIR_COHERENT_MIX = "/path/to/coherent/output"
-- OUTPUT_DIR_INCOHERENT_MIX = "/path/to/incoherent/output"
-
-# 1. Single Stem Random Augmentation
+## Single Stem Random Augmentation Module
 
 ```mermaid
 flowchart LR
@@ -56,7 +50,7 @@ style N4 fill:#ffecb3
 ```
 
 
-# 2. Incoherent Augmentation Pipeline
+## Incoherent Augmentation Pipeline
 
 This pipeline combines stems from multiple tracks to create novel mixtures.
 
@@ -86,7 +80,7 @@ graph TD
     F --> G[Final Augmented Mixture]
 ```
 
-# 3. Coherent Augmentation Pieline
+## Coherent Augmentation Pieline
 
 This pipelines combines stems from a single track to create novel mixtures.
 ```mermaid
@@ -114,4 +108,12 @@ graph TD
     E --> F[Normalize]
     F --> G[Final Augmented Mixture]
 ```
+
+# Paths to check
+Make sure you update the paths in the config object to match the targeted directories location on your machine.
+- MUSDB18_PATH = "/path/to/musdb18"
+- OUTPUT_DIR_COHERENT_MIX = "/path/to/coherent/output"
+- OUTPUT_DIR_INCOHERENT_MIX = "/path/to/incoherent/output"
+
+
 
