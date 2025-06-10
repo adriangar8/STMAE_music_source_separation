@@ -2,19 +2,25 @@
 The <b>MUSDB18_Audio_Data_Augmentation.ipynb</b>  notebook provides a complete pipeline for augmenting audio data from the MUSDB18 dataset, which is widely used for music source separation tasks. The system extracts individual instrument stems (vocals, drums, bass, other) from music tracks and applies various audio augmentation techniques to generate synthetic training data.
 
 # Features
+<b> Core Functionality</b>
 - Dataset Integration: Seamless loading and processing of MUSDB18 dataset
 - Mono Conversion: Automatic stereo-to-mono conversion for simplified processing
 - Multi-stem Processing: Individual handling of vocals, drums, bass, and other instrument tracks
 - Audio Quality Assessment: Automatic validation of audio segments for energy and activity levels
-Audio Augmentation Techniques
+  - Energy Threshold: Minimum RMS energy validation (0.005)
+  - Silent Segment Detection: Activity ratio analysis (30% minimum)
+
+
+<b>Audio Augmentation Techniques</b>
 - Pitch Shifting: Transpose audio by specified semitones (-2 to +2 semitones)
 - Time Stretching: Modify playback speed while preserving pitch (0.8x to 1.2x)
 - Dynamic Range Compression: Apply audio compression with configurable threshold and ratio
 - Reverb Effects: Add spatial ambience with adjustable room size and damping parameters
 
+
 # Augmentation Strategies
-Coherent Augmentation (Fixed Parameters): Apply identical augmentation parameters across all stems from the same track
-Semi-Coherent Augmentation (Varying Parameters): Apply different random augmentations to each stem from the same track
+    Coherent Augmentation (Fixed Parameters): Apply identical augmentation parameters across all stems from the same track
+   Semi-Coherent Augmentation (Varying Parameters): Apply different random augmentations to each stem from the same track
 Incoherent Augmentation: Combine stems from different tracks with individual augmentations
 
 ## Single Stem Random Augmentation Module
