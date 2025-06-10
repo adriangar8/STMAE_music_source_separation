@@ -8,7 +8,7 @@ This project focuses on Music Source Separation (MSS), which decomposes a mixed 
 
 In order to increase the training material, we implemented an augmentation pipeline for the audio files present in the dataset.
 
-<b>Core Functionality</b>
+## Core Functionality
 
 - Dataset Integration: Seamless loading and processing of MUSDB18 dataset
 - Mono Conversion: Automatic stereo-to-mono conversion for simplified processing
@@ -17,13 +17,14 @@ In order to increase the training material, we implemented an augmentation pipel
 - Energy Threshold: Minimum RMS energy validation (0.005)
 - Silent Segment Detection: Activity ratio analysis (30% minimum)
 
-<b>Audio Augmentation Techniques</b>
+## Audio Augmentation Techniques
 - Pitch Shifting: Transpose audio by specified semitones (-2 to +2 semitones)
 - Time Stretching: Modify playback speed while preserving pitch (0.8x to 1.2x)
 - Dynamic Range Compression: Apply audio compression with configurable threshold and ratio
 - Reverb Effects: Add spatial ambience with adjustable room size and damping parameters
 
 Go check the data folder's README.md file for more details.
+
 
 # Models
 
@@ -41,6 +42,7 @@ Inspired by TFC‑TDF‑UNet v3, this model uses a standard U‑Net encoder–
 ### References
 - TFC‑TDF‑UNet v3 paper: https://arxiv.org/abs/2211.08553
 - Example implementation: https://github.com/jianchang512/vocal-separate
+- Fundamentals of Music Source Separation & Data Augmentation: https://source-separation.github.io/tutorial/intro/src_sep_101.html
 
 
 
