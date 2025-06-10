@@ -63,10 +63,10 @@ We implement two complementary MSS models:
 
 Quick start:
 ```bash
-python src/models/BandSplitRNN/train_bsrnn_se.py \
-  --data-dir datasets/musdb18 \
-  --epochs 100 \
-  --batch-size 2
+//python src/data/src/data/MUSDB18_Audio_Data_Augmentation.ipynb \
+//  --data-dir datasets/musdb18 \
+//  --epochs 100 \
+//  --batch-size 2
 ```
 
 ## 2. Lightweight U‑Net
